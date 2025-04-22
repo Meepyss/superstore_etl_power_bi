@@ -104,7 +104,7 @@ This repository contains a complete Business Intelligence project applied to the
 ## Repository Structure
 ```
 ├── data/                       # Raw and processed CSV files
-│   ├── Global Superstore.csv   # Original dataset from Kaggle
+│   ├── Sample - Superstore.csv   # Original dataset from Kaggle
 │   ├── superstore_cleaned.csv  # Cleaned dataset after ETL
 │   ├── dim_data.csv            # Date dimension
 │   ├── dim_produto.csv         # Product dimension
