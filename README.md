@@ -1,5 +1,9 @@
+# **Origem dos dados/Dataset:**
+ https://www.kaggle.com/datasets/vivek468/superstore-dataset-final
+ 
 # superstore_etl_power_bi
 Um projeto de análise de dados de uma empresa fícticia(DADOS KAGGLE) utilizando Python e PowerBI 
+
 # Global Superstore BI Project
 
 ## Visão Geral
