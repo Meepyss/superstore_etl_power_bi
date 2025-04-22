@@ -23,7 +23,7 @@ O objetivo é demonstrar todo o fluxo de trabalho — desde a obtenção dos dad
 ## Estrutura do Repositório
 ```
 ├── data/                       # Dados brutos e limpos em CSV
-│   ├── Global Superstore.csv   # CSV original do Kaggle
+│   ├── Sample - Superstore.csv   # CSV original do Kaggle
 │   └── superstore_cleaned.csv  # CSV após ETL
 │   └── dim_data.csv
 │   └── dim_produto.csv
