@@ -7,10 +7,10 @@ Este repositório contém o projeto completo de Business Intelligence aplicado a
 - **ETL em Python**: carregamento, limpeza, transformação e criação de um star schema (dimensões e tabela de fatos).  
 - **Power BI Dashboard**: modelo dimensional importado e dashboards interativos com KPIs, gráficos de tendência, análises geográficas e filtros dinâmicos.  
 
-O objetivo é demonstrar todo o fluxo de trabalho — desde a obtenção dos dados até a apresentação final — para recrutadores e stakeholders.
+O objetivo é demonstrar todo o fluxo de trabalho — desde a obtenção dos dados até a apresentação final — para recrutadores e estudantes.
 
 ## Tecnologias Utilizadas
-- **Python 3.x** com pacotes: `pandas`, `numpy`  
+- **Python 3.x** com pacotes: `pandas`
 - **Power BI Desktop** (versão mais recente)  
 - **DAX** para criação de medidas (Total Sales, Profit Margin, etc.)
 
