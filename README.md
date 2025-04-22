@@ -1,2 +1,81 @@
 # superstore_etl_power_bi
 Um projeto de análise de dados de uma empresa fícticia(DADOS KAGGLE) utilizando Python e PowerBI 
+# Global Superstore BI Project
+
+## Visão Geral
+Este repositório contém o projeto completo de Business Intelligence aplicado ao dataset **Global Superstore**. Nele você encontrará:  
+- **ETL em Python**: carregamento, limpeza, transformação e criação de um star schema (dimensões e tabela de fatos).  
+- **Power BI Dashboard**: modelo dimensional importado e dashboards interativos com KPIs, gráficos de tendência, análises geográficas e filtros dinâmicos.  
+
+O objetivo é demonstrar todo o fluxo de trabalho — desde a obtenção dos dados até a apresentação final — para recrutadores e stakeholders.
+
+## Tecnologias Utilizadas
+- **Python 3.x** com pacotes: `pandas`, `numpy`  
+- **Power BI Desktop** (versão mais recente)  
+- **DAX** para criação de medidas (Total Sales, Profit Margin, etc.)
+
+
+## Estrutura do Repositório
+```
+├── data/                       # Dados brutos e limpos em CSV
+│   ├── Global Superstore.csv   # CSV original do Kaggle
+│   └── superstore_cleaned.csv  # CSV após ETL
+│   └── dim_data.csv
+│   └── dim_produto.csv
+│   └── dim_cliente.csv
+│   └── dim_shipmode.csv
+│   └── fact_vendas.csv
+├── scripts/                    # Scripts de processamento
+│   └── superstore_etl.py       # ETL e criação do star schema
+├── powerbi/                    # Arquivos do Power BI
+│   └── dashboard.pbix          # Modelo e dashboards prontos
+│   └── screenshots/            # Imagens demonstrativas do dashboard
+├── README.md                   # Documentação do projeto (este arquivo)
+└── LICENSE                     # Licença do repositório
+```
+
+## Como Executar o ETL
+1. Clone este repositório:  
+   ```bash
+   git clone https://github.com/seu-usuario/global-superstore-bi.git
+   cd global-superstore-bi
+   ```
+2. Instale as dependências:  
+   ```bash
+   pip install pandas numpy
+   ```
+3. Coloque o arquivo `Global Superstore.csv` em `data/`.  
+4. Execute o script de ETL:  
+   ```bash
+   python scripts/superstore_etl.py
+   ```
+   Isso gerará os CSVs das dimensões e da tabela de fatos em `data/`.
+
+## Modelo Dimensional (Star Schema)
+- **DimData**: atributos temporais (Year, Month, Quarter, DayOfWeek)  
+- **DimProduto**: Category, Sub-Category, ProductName  
+- **DimCliente**: Segment, Country, State, City, Region  
+- **DimShipMode**: ShipMode  
+- **FactVendas**: chaves para dimensões e medidas (Sales, Profit, Quantity, AvgOrderValue, DeliveryDays)
+
+## Dashboard em Power BI
+1. Abra o Power BI Desktop.  
+2. Em **Get Data → CSV**, importe os arquivos `dim_*.csv` e `fact_vendas.csv` de `data/`.  
+3. No **Model view**, crie relacionamentos 1:* entre a tabela de fatos e cada dimensão usando as chaves surrogate.  
+4. Crie medidas DAX em **FactVendas**:  
+   - `Total Sales = SUM('fact_vendas'[Sales])`  
+   - `Profit Margin = DIVIDE(SUM('fact_vendas'[Profit]), SUM('fact_vendas'[Sales]), 0)`  
+   - `Avg Order Value = AVERAGE('fact_vendas'[AvgOrderValue])`  
+   - `Avg Delivery Days = AVERAGE('fact_vendas'[DeliveryDays])`  
+5. Monte seus visuais (Cards, Line chart, Bar chart, Map, Slicers).  
+
+## Demonstração e Publicação
+- **Power BI Service**: publique o arquivo `.pbix` em seu workspace para gerar link público.  
+- **Issue Tracker**: registre feedback ou dúvidas neste repositório.  
+
+## Contribuição
+Contribuições são bem-vindas! Abra um **Pull Request** ou **Issue** para sugestões de melhoria.
+
+## Licença
+Este projeto está licenciado sob a [MIT License](LICENSE).
+
