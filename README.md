@@ -1,5 +1,3 @@
-# **Acesse aqui o Dashboard Interativo**
-https://app.powerbi.com/links/ygEQTLMi52?ctid=55c5bfb0-1cdf-41c8-b261-5cd7aef9d36d&pbi_source=linkShare&bookmarkGuid=3f2831f4-c5be-4299-9ed2-8d343d2387d3
 
 # **Origem dos dados/Dataset:**
  https://www.kaggle.com/datasets/vivek468/superstore-dataset-final
